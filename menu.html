@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="menu.css" />
+<title>メニュー</title>
+<script type="text/javascript">
+function viewSetting()
+{
+	if(document.getElementById("setting1").style.display == "none") {
+		document.getElementById("setting1").style.display = "";
+		document.getElementById("setting2").style.display = "";
+		document.getElementById("setting3").style.display = "";
+	}
+	else {
+		document.getElementById("setting1").style.display = "none";
+		document.getElementById("setting2").style.display = "none";
+		document.getElementById("setting3").style.display = "none";
+	}
+}
+
+</script>
+</head>
+
+<body onLoad="viewSetting();">
+
+<div class="section">
+   <div class="menu">
+      <h2><a href="main.php" target="body">メニュー</a></h2>
+      <ul>
+         <li class="current">名簿の参照・編集</li>
+         <li class="2"><a href="list.php?initial=a" target="body">あ～お</a></li>
+         <li class="2"><a href="list.php?initial=k" target="body">か～こ</a></li>
+         <li class="2"><a href="list.php?initial=s" target="body">さ～そ</a></li>
+         <li class="2"><a href="list.php?initial=t" target="body">た～と</a></li>
+         <li class="2"><a href="list.php?initial=n" target="body">な～の</a></li>
+         <li class="2"><a href="list.php?initial=h" target="body">は～ほ</a></li>
+         <li class="2"><a href="list.php?initial=m" target="body">ま～も</a></li>
+         <li class="2"><a href="list.php?initial=y" target="body">や～よ</a></li>
+         <li class="2"><a href="list.php?initial=r" target="body">ら～ろ</a></li>
+         <li class="2"><a href="list.php?initial=w" target="body">わ～ん</a></li>
+         <li class="2"><a href="list.php?initial=x" target="body">その他</a></li>
+         <li><a href="search.php" target="body" class="current">検索</a></li>
+         <li><a href="input.php" target="body" class="current" onClick="top.body.focus();">新規登録</a></li>
+         <li class="current">Excel出力</li>
+         <li class="2"><a href="excelKyohi.php" target="body">教費台帳</a></li>
+         <li class="2"><a href="excelOut.php" target="body">汎用班員名簿</a></li>
+         <li><a href="history.php" target="body" class="current">変更履歴</a></li>
+         <li><a href="#" class="current" onClick="viewSetting();"><b>[ 設定 ]</b></A></li>
+         <li class="2" id="setting1"><a href="diocese.php" target="body" class="current">教区 設定</a></li>
+         <li class="2" id="setting2"><a href="nengo.php" target="body" class="current">和暦年号 設定</a></li>
+         <li class="2" id="setting3"><a href="updateZIP.php" target="_blank" class="current">郵便番号DB 更新</a></li>
+      </ul>
+   </div><!-- menu end -->
+</div><!-- section end -->
+
+</body>
+
+</html>

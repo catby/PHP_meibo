@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="base.css">
+<script type="text/javascript">
+<!--
+function checkDelete()
+{
+	var ret = confirm("本当に削除して良いですか？");
+	if(ret == true) {
+		document.Main.elements["type"].value = "delete";
+		document.Main.submit();
+	}
+}
+// -->
+</script>
+
+</head>
+<body>
+
+#header1#
+<div>
+<div class="left"><H2>筆頭者欄</H2></div>
+#header2#
+</div>
+
+<HR>
+<table>
+	<tr><th width=12%>登録番号</th><td>#idx#</td>
+		<th width=12%>入信日</th><td colspan=3>#EntryDay#</td></tr>
+	<tr><th width=12% rowspan=2>氏名</th><td rowspan=2><span class="LargeName"><ruby><rb><font face="HG教科書体">#Name0#</font></rb>
+	                                                                                                         <rt>#Phonetic0#</rt></ruby></span></td>
+		<th width=12%>生年月日</th><td colspan=3 nowrap>#BirthDay0#</td></tr>
+	<tr><th width=12%>性別</th><td width=12% align=center>#Sex0#</td>
+		<th width=12%>電話番号</th><td width=20%>#TEL0#</td></tr>
+	<tr><th width=12%>住所</th><td colspan=5>〒#ZIP0#<BR>
+								#Address0#
+								</td></tr>
+	<tr><th>教区・班</th><td colspan=5>#Team#</td></tr>
+#Haiju0#
+</table>
+<BR>
+

@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="base.css">
+<body>
+<table cellpadding="0" cellspacing="0" style="margin:0px; padding: 0px;">
+	<tr><th>氏名</th>
+		<td><input type="text" id="name_#idx#"name="Name_#idx#" size="30" style="ime-mode:active;" onChange="checkFamilyEntry(#idx#)" value="#Name#" tabindex=#Tab%1#/>(全角)</td>
+		<th>生年月日</th><td colspan="3">#BirthDay%10#</td>
+		</tr>
+	<tr><th>ふりがな</th>
+		<td><input type="text" id="ruby_#idx#" name="Phonetic_#idx#" size="30" style="ime-mode:active;" value="#Phonetic#" tabindex=#Tab%2#/>(全角かな)</td>
+		<th>性別</th>
+		<td><input type="radio" name="Sex_#idx#" value="男" #Sex_M# tabindex=#Tab%20#>男　　
+			<input type="radio" name="Sex_#idx#" value="女" #Sex_W# tabindex=#Tab%21#>女</td>
+		<th>続柄</th>
+		<td><input type="text" name="Relationship_#idx#" size="8" value="#Relationship#" tabindex=#Tab%30#/></td>
+		</tr>
+	<tr><th>得度	</th><td colspan="5">#TokudoDate%40#</td></tr>
+	<tr><th>教師拝受</th><td colspan="5">#TeacherDate%50#</td></tr>
+	<tr><th>住所</th>
+		<td><input type="checkbox" ID="isLivingTogether_#idx#" tabindex=#Tab%60#>同居
+			〒<input type="text" name="ZIP3_#idx#" size="4" maxlength="3" style="ime-mode:disabled;" value="#ZIP_3#" tabindex=#Tab%61#/> - 
+			<input type="text" name="ZIP4_#idx#" size="5" maxlength="4" style="ime-mode:disabled;" value="#ZIP_4#" tabindex=#Tab%62#/>
+			&nbsp;&nbsp;<input type="button" ID="ZIP2Address_#idx#" value="住所検索" onClick="loadAddress('ZIP3_#idx#', 'ZIP4_#idx#', 'Pref_#idx#', 'Address_#idx#')" tabindex=#Tab%63#><BR>
+			<select name="Pref_#idx#" tabindex=#Tab%64#>#Pref#</select>
+			<input type="text" name="Address_#idx#" size="60" style="ime-mode:active;" value="#Address#" tabindex=#Tab%65#/>
+			</td>
+		<th>電話番号</th>
+		<td colspan="3"><input type="text" name="TEL_#idx#" size="30" style="ime-mode:disabled;" value="#TEL#" tabindex=#Tab%70#></td>
+		</tr>
+</table>
+<script type="text/javascript">
+	var auto_kana_#idx# = new AutoKana('name_#idx#', 'ruby_#idx#', {toggle:false});
+	
+	if(document.Main.elements["Address_#idx#"].value == "") {
+		document.getElementById("isLivingTogether_#idx#").checked = true;
+		document.Main.elements["ZIP3_#idx#"].disabled = true;
+		document.Main.elements["ZIP4_#idx#"].disabled = true;
+		document.Main.elements["ZIP2Address_#idx#"].disabled = true;
+		document.Main.elements["Pref_#idx#"].disabled = true;
+		document.Main.elements["Address_#idx#"].disabled = true;
+	}
+
+	document.getElementById("isLivingTogether_#idx#").onclick = function()
+	{
+		if(document.getElementById("isLivingTogether_#idx#").checked) {
+			document.Main.elements["ZIP3_#idx#"].disabled = true;
+			document.Main.elements["ZIP4_#idx#"].disabled = true;
+			document.Main.elements["ZIP2Address_#idx#"].disabled = true;
+			document.Main.elements["Pref_#idx#"].disabled = true;
+			document.Main.elements["Address_#idx#"].disabled = true;
+		}
+		else {
+			document.Main.elements["ZIP3_#idx#"].disabled = false;
+			document.Main.elements["ZIP4_#idx#"].disabled = false;
+			document.Main.elements["ZIP2Address_#idx#"].disabled = false;
+			document.Main.elements["Pref_#idx#"].disabled = false;
+			document.Main.elements["Address_#idx#"].disabled = false;
+		}
+	}
+</script>

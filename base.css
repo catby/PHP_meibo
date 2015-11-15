@@ -1,0 +1,91 @@
+DIV {
+	border:0;
+	margin:0;
+	padding:0;
+}
+DIV.left {
+	text-align: left;
+	float: left;
+}
+
+DIV.right {
+	margin:5px;
+	text-align: right;
+}
+
+DIV form {
+	border:0px;
+	margin:5px;
+	padding:0px;
+}
+
+H1 {
+	text-align: center;
+	margin:0;
+	padding:0;
+}
+H2 {
+	margin:0;
+	padding:0;
+}
+H3 {
+	margin:0;
+	padding:0;
+}
+hr {
+	color: #CCCCCC;
+	height: 5px;
+}
+
+table {
+	border:0;
+	font-size: 108%;
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+	color: #666666;
+	width: 100%;
+	margin-bottom: 10px;
+}
+table.noFullSize {
+	width: auto;
+}
+
+table.family {
+	border:0;
+	font-size: 108%;
+	border-collapse: separate;
+	border-spacing: 0px;
+	background-color: #FFFFFF;
+	color: #666666;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.normal {
+	border:0;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+}
+table.normal td {
+	border:0;
+	padding: 5px;
+}
+
+th {
+	background: #999999;
+	color: #FFFFFF;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+}
+
+td {
+	color: #666666;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+}
+
+span.LargeName {
+	font-size: 175%;
+}
